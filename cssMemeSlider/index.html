@@ -1,10 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>memeSlider</title>
+  <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+  <div class="wrapper">
+    <main class="main">
+      <div class="img">
+        <div class="ribbon">
+            <div class="slide"><img src="https://sayingimages.com/wp-content/uploads/alright-people-lets-do-this-motivational-memes.jpg" alt="first slider"></div>
+            <div class="slide"><img src="https://remote-tools-images.s3.amazonaws.com/inspirational-memes/28.jpg" alt=""></div>
+            <div class="slide"><img src="https://www.therandomvibez.com/wp-content/uploads/2017/07/Encouraging-Memes-Tumblr.jpg" alt=""></div>
+            <div class="slide"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSS7L3n6FcDL7HibxkNj7S4knvJXuqKV481rA&s" alt=""></div>
+             <!-- -->
+        </div>
+      </div>
+      <div class="container">
+        <div class="text">
+            <div class="text_ribbon">
+                <div class="text_item">Alright people let's do this</div>
+                <div class="text_item">Believe in yourself</div>
+                <div class="text_item">Don't give up</div>
+                <div class="text_item">Success is waiting for you!</div>
+            </div>
+        </div>
+        <div class="controler">
+          <!-- <div class="controler_items active_item" id="i_0"><div class="circle i_0"></div></div>
+          <div class="controler_items" id="i_1"><div class="circle i_1"></div></div>
+          <div class="controler_items" id="i_2"><div class="circle i_2"></div></div>
+          <div class="controler_items" id="i_3"><div class="circle i_3"></div></div> -->
+          <input type="radio" name="control" id="mem1" checked>
+      <input type="radio" name="control" id="mem2">
+      <input type="radio" name="control" id="mem3">
+      <input type="radio" name="control" id="mem4">
+        </div>
+        <div class="slider_nav">
+            <label for="mem1"></label>
+            <label for="mem2"></label>
+            <label for="mem3"></label>
+            <label for="mem4"></label>
+          </div>
+      </div>
+    </main>
+  </div>
 </body>
 </html>
