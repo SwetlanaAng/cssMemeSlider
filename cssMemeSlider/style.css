@@ -20,15 +20,18 @@ body {
 .main {
   background-color: rgb(31, 31, 31);
   width: 97%;
-  
+  display: flex;
 }
 .container{
-  display: flex;
+  
+  
   justify-content: space-between;
-  margin: 0 15px 44px;
+ 
 } 
 
 .img{
+    display: flex;
+    flex-wrap: wrap;
     width: 96%;
   margin: 10px 15px 0;
   overflow: hidden;
@@ -37,7 +40,6 @@ body {
 .ribbon{
     display: flex;
     width: 400%;
-    height: 100%;
     
     transition-duration: 1s;
 }
@@ -46,14 +48,9 @@ body {
 }
 .slider_nav{
     display: flex;
+    height: 25;
 }
-.slider-nav>div{
-    display: grid;
-    grid-area: 1 / 1;
-}
-label{ 
-    
-}
+.empty{height: 75%;}
 input{
     display: none;
 }
@@ -71,23 +68,17 @@ input{
 }
 
 
-#text1:checked ~ .text_ribbon{
+#mem1:checked ~ .text_ribbon{
     transform: translateX(0);
 }
-#text2:checked  ~ .text_ribbon{
+#mem2:checked  ~ .text_ribbon{
     transform: translateX(-25%);
 }
-#text3:checked  ~ .text_ribbon{
+#mem3:checked  ~ .text_ribbon{
     transform: translateX(-50%);
 }
-#text4:checked  ~ .text_ribbon{
+#mem4:checked  ~ .text_ribbon{
     transform: translateX(-75%);
-}
-.text_lab{
-    display: block;
-    width: 1em;
-  height: 1em;
-  background-color:rgba(240, 248, 255, 0)
 }
 img{
   width: 100%;
@@ -98,36 +89,34 @@ img{
   display: flex;
   
 }
-.text{
-    width: 30%;
-  color: rgb(249, 236, 214);
-  margin-bottom: 10px;
-  padding-top: 17px;
-  overflow: hidden;
-}
 .text_ribbon{
     display: flex;
     transition-duration: 1s;
     width: 400%;
+    color: rgb(249, 236, 214);
+    margin-bottom: 10px;
+    padding-top: 17px;
+    overflow: hidden;
 }
 .text_item{
     width: 25%;
 }
-.controler_items{
-  padding-top: 17px;
-  padding-bottom: 20px;
-  padding-left: 11px;
-  
-}
 .circle{
   width: 1em;
   height: 1em;
-  
+  margin: 0.5em;
   border-radius: 100%;
   background-color:hsl(236, 77%, 76%);
   border: solid rgb(147, 153, 241);
 }
-.controler_items:hover .circle{
+.area{
+    width: 2em;
+    height: 2em;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+.area:hover .circle{
     background-color:rgb(249, 236, 214);
     border: solid rgb(249, 236, 214);
     cursor: pointer;
