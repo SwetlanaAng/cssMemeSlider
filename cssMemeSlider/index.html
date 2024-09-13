@@ -1,10 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>memeSlider</title>
+  <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+  <div class="wrapper">
+    <main class="main">
+      <div class="img">
+          <input type="radio" name="control" id="mem1" checked>
+          <input type="radio" name="control" id="mem2">
+          <input type="radio" name="control" id="mem3">
+          <input type="radio" name="control" id="mem4">
+          <div class="ribbon">
+            <div class="slide"><img src="https://sayingimages.com/wp-content/uploads/alright-people-lets-do-this-motivational-memes.jpg" alt="the first slider"></div>
+            <div class="slide"><img src="https://remote-tools-images.s3.amazonaws.com/inspirational-memes/28.jpg" alt="the second slider"></div>
+            <div class="slide"><img src="https://www.therandomvibez.com/wp-content/uploads/2017/07/Encouraging-Memes-Tumblr.jpg" alt="the third slider"></div>
+            <div class="slide"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSS7L3n6FcDL7HibxkNj7S4knvJXuqKV481rA&s" alt="the fourth slider"></div>
+          </div>
+          <div class="cont">
+            <div class="text_ribbon">
+            <div class="slide"><div class="text_item"><span>Alright people let's do this</span></div></div>
+            <div class="slide"><div class="text_item"><span>Believe in yourself</span></div></div>
+            <div class="slide"><div class="text_item"><span>Don't give up</span></div></div>
+            <div class="slide"><div class="text_item"><span>Success is waiting for you!</span></div></div>
+          </div>
+          </div>
+        <div class="slider_nav">
+          <label class="circle" for="mem1"><span class="span1"></span></label>
+          <label class="circle" for="mem2"><span class="span2"></span></label>
+          <label class="circle" for="mem3"><span class="span3"></span></label>
+          <label class="circle" for="mem4"><span class="span4"></span></label>
+        </div>
+      </div>
+    </main>
+  </div>
 </body>
 </html>

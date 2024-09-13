@@ -1,0 +1,205 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+.wrapper {
+  background-color: rgb(233, 233, 233);
+  width: 70vw;
+  padding: 1% 0 1%;
+  margin: 0 auto;
+  margin-top: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2vh;
+}
+.main {
+  background-color: rgb(31, 31, 31);
+  width: 97%;
+  display: flex;
+  justify-content: center;
+}
+.img {
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+  grid-template-rows: repeat(4, 14vh);
+  width: 96%;
+  margin: 1% 1.5% 0;
+  overflow: hidden;
+}
+.ribbon {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 4;
+  display: flex;
+  width: calc(4* 100%);
+  flex-shrink: 0;
+  transition-duration: 1s;
+}
+.cont>.text_ribbon {
+  display: flex;
+  flex-shrink: 0;
+  transition-duration: 1s;
+  width: 400%;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: rgb(249, 236, 214);
+  margin-bottom: 1%;
+  padding-top: 3%;
+}
+.cont {
+  overflow: hidden;
+  display: flex;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 4;
+  grid-row-end: 5;
+  width: 81%;
+}
+.slide {
+  width: 25%;
+}
+.slider_nav {
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 4;
+  grid-row-end: 5;
+  display: flex;
+  height: 40%;
+  justify-self: end;
+  margin-right: 5%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+input {
+    display: none;
+}
+#mem1:checked ~ .ribbon{
+    transform: translateX(0);
+}
+#mem2:checked  ~ .ribbon{
+    transform: translateX(-25%);
+}
+#mem3:checked  ~ .ribbon{
+    transform: translateX(-50%);
+}
+#mem4:checked  ~ .ribbon{
+    transform: translateX(-75%);
+}
+
+#mem1:checked ~ .cont>.text_ribbon{
+    transform: translateX(0);
+}
+#mem2:checked  ~ .cont>.text_ribbon{
+    transform: translateX(-25%);
+}
+#mem3:checked  ~ .cont>.text_ribbon{
+    transform: translateX(-50%);
+}
+#mem4:checked  ~ .cont>.text_ribbon{
+    transform: translateX(-75%);
+}
+
+#mem1:checked ~ .slider_nav>.circle>.span1{
+    border: 2px solid rgb(147, 153, 241);
+    background-color:rgb(147, 153, 241, 0);
+}
+#mem2:checked ~ .slider_nav>.circle>.span2{
+  border: 2px solid rgb(147, 153, 241);
+  background-color:rgb(147, 153, 241, 0);
+}
+#mem3:checked ~ .slider_nav>.circle>.span3{
+  border: 2px solid rgb(147, 153, 241);
+  background-color:rgb(147, 153, 241, 0);
+}
+#mem4:checked ~ .slider_nav>.circle>.span4{
+  border: 2px solid rgb(147, 153, 241);
+  background-color:rgb(147, 153, 241, 0);
+}
+#mem1:checked ~ .slider_nav>.circle>.span1:hover{
+  border: 2px solid rgb(249, 236, 214);
+  background-color:rgb(147, 153, 241, 0);
+}
+#mem2:checked ~ .slider_nav>.circle>.span2:hover{
+border: 2px solid rgb(249, 236, 214);
+background-color:rgb(147, 153, 241, 0);
+}
+#mem3:checked ~ .slider_nav>.circle>.span3:hover{
+border: 2px solid rgb(249, 236, 214);
+background-color:rgb(147, 153, 241, 0);
+}
+#mem4:checked ~ .slider_nav>.circle>.span4:hover{
+border: 2px solid rgb(249, 236, 214);
+background-color:rgb(147, 153, 241, 0);
+}
+img {
+  width: 100%;
+  height: 41vh;
+  display: block;
+  margin-bottom: 2%;
+  border-radius: 2vh;
+}
+.circle{
+  padding: 0.5em;
+  transition-duration: 0.5s;
+}
+.circle>span {
+  display: block;
+  width: 0.7em;
+  height: 0.7em;
+  
+  border-radius: 100%;
+  background-color:hsl(236, 77%, 76%);
+  border: 2px solid rgb(147, 153, 241);
+}
+.circle:hover span {
+  background-color:rgb(249, 236, 214);
+  border: 2px solid rgb(249, 236, 214);
+  cursor: pointer;
+  transition-duration: 0.3s;
+}
+
+@media (max-width: 800px) and (min-width: 499px){
+  .wrapper {
+  width: 60vw;
+  }
+  .img {
+  grid-template-rows: repeat(6, 6vh);
+  }
+  .ribbon {
+    grid-row-start: 1;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 5;
+  }
+  .slider_nav {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    justify-self: center;
+    margin-right: 0;
+  }
+  .cont {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 5;
+    grid-row-end: 6;
+    width: 100%;
+    align-self: self-start;
+  }
+  img {
+    height: 18vh;
+  }
+}
+@media (max-width: 800px) and (min-width: 650px){
+  .img {
+    grid-template-rows: repeat(6, 10vh);
+  }
+  img {
+    height: 30vh;
+  }
+}
